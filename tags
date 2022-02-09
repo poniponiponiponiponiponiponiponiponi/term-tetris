@@ -1,0 +1,312 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/arisu/projects/tetris/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+$(objects)	Makefile	/^$(objects): $(objects_dir)\/.\/%.o: %.c$/;"	t
+$(objects_dir)	Makefile	/^$(objects_dir):$/;"	t
+$(objects_dir)/./%.o	Makefile	/^$(objects): $(objects_dir)\/.\/%.o: %.c$/;"	t
+$(target)	Makefile	/^$(target): $(objects_dir) $(objects) $/;"	t
+ARRAY_SIZE	src/util.h	/^#define ARRAY_SIZE(/;"	d
+About	README.md	/^## About$/;"	s	chapter:Tetris
+BLOCK_ARR_DIM	src/block.h	/^#define BLOCK_ARR_DIM /;"	d
+BLOCK_COLOR_BLACK	src/block.h	/^    BLOCK_COLOR_BLACK,$/;"	e	enum:BlockColor
+BLOCK_COLOR_BLUE	src/block.h	/^    BLOCK_COLOR_BLUE,$/;"	e	enum:BlockColor
+BLOCK_COLOR_CYAN	src/block.h	/^    BLOCK_COLOR_CYAN,$/;"	e	enum:BlockColor
+BLOCK_COLOR_GREEN	src/block.h	/^    BLOCK_COLOR_GREEN,$/;"	e	enum:BlockColor
+BLOCK_COLOR_MAGENTA	src/block.h	/^    BLOCK_COLOR_MAGENTA,$/;"	e	enum:BlockColor
+BLOCK_COLOR_RED	src/block.h	/^    BLOCK_COLOR_RED,$/;"	e	enum:BlockColor
+BLOCK_COLOR_SHADOW	src/block.h	/^    BLOCK_COLOR_SHADOW$/;"	e	enum:BlockColor
+BLOCK_COLOR_WHITE	src/block.h	/^    BLOCK_COLOR_WHITE,$/;"	e	enum:BlockColor
+BLOCK_COLOR_YELLOW	src/block.h	/^    BLOCK_COLOR_YELLOW,$/;"	e	enum:BlockColor
+BLOCK_EMPTY	src/block.h	/^    BLOCK_EMPTY,$/;"	e	enum:BlockType
+BLOCK_H	src/block.h	/^#define BLOCK_H$/;"	d
+BLOCK_HEIGHT	src/util.h	/^#define BLOCK_HEIGHT /;"	d
+BLOCK_I	src/block.h	/^    BLOCK_I,$/;"	e	enum:BlockType
+BLOCK_J	src/block.h	/^    BLOCK_J,$/;"	e	enum:BlockType
+BLOCK_L	src/block.h	/^    BLOCK_L,$/;"	e	enum:BlockType
+BLOCK_MAX	src/block.h	/^    BLOCK_MAX$/;"	e	enum:BlockType
+BLOCK_O	src/block.h	/^    BLOCK_O,$/;"	e	enum:BlockType
+BLOCK_S	src/block.h	/^    BLOCK_S,$/;"	e	enum:BlockType
+BLOCK_T	src/block.h	/^    BLOCK_T,$/;"	e	enum:BlockType
+BLOCK_WIDTH	src/util.h	/^#define BLOCK_WIDTH /;"	d
+BLOCK_Z	src/block.h	/^    BLOCK_Z,$/;"	e	enum:BlockType
+BOARD_H	src/board.h	/^#define BOARD_H$/;"	d
+BOARD_HEIGHT	src/util.h	/^#define BOARD_HEIGHT /;"	d
+BOARD_WIDTH	src/util.h	/^#define BOARD_WIDTH /;"	d
+Block	src/block.h	/^typedef struct Block {$/;"	s
+Block	src/block.h	/^} Block;$/;"	t	typeref:struct:Block
+BlockColor	src/block.h	/^typedef enum BlockColor {$/;"	g
+BlockColor	src/block.h	/^} BlockColor;$/;"	t	typeref:enum:BlockColor
+BlockType	src/block.h	/^typedef enum BlockType {$/;"	g
+BlockType	src/block.h	/^} BlockType;$/;"	t	typeref:enum:BlockType
+Board	src/board.h	/^typedef struct Board {$/;"	s
+Board	src/board.h	/^} Board;$/;"	t	typeref:struct:Board
+BoardCtx	src/tetris.h	/^typedef struct BoardCtx {$/;"	s
+BoardCtx	src/tetris.h	/^} BoardCtx;$/;"	t	typeref:struct:BoardCtx
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Wpedantic -O3 -march=native --std=gnu11 -ggdb -Wstrict-aliasing$/;"	m
+CIRCULAR_BUFFER_H	src/circular_buffer.h	/^#define CIRCULAR_BUFFER_H$/;"	d
+CircularBuffer	src/circular_buffer.h	/^typedef struct CircularBuffer {$/;"	s
+CircularBuffer	src/circular_buffer.h	/^} CircularBuffer;$/;"	t	typeref:struct:CircularBuffer
+Controls	README.md	/^## Controls$/;"	s	chapter:Tetris
+DOWN	src/block.h	/^    DOWN,$/;"	e	enum:Rotation
+EXIT	src/tetris.h	/^    EXIT,$/;"	e	enum:MenuOptions
+FALL_AFTER_LEVEL1	src/util.h	/^#define FALL_AFTER_LEVEL1 /;"	d
+FALL_AFTER_LEVEL10	src/util.h	/^#define FALL_AFTER_LEVEL10 /;"	d
+FALL_AFTER_LEVEL11	src/util.h	/^#define FALL_AFTER_LEVEL11 /;"	d
+FALL_AFTER_LEVEL14	src/util.h	/^#define FALL_AFTER_LEVEL14 /;"	d
+FALL_AFTER_LEVEL17	src/util.h	/^#define FALL_AFTER_LEVEL17 /;"	d
+FALL_AFTER_LEVEL2	src/util.h	/^#define FALL_AFTER_LEVEL2 /;"	d
+FALL_AFTER_LEVEL20	src/util.h	/^#define FALL_AFTER_LEVEL20 /;"	d
+FALL_AFTER_LEVEL3	src/util.h	/^#define FALL_AFTER_LEVEL3 /;"	d
+FALL_AFTER_LEVEL30	src/util.h	/^#define FALL_AFTER_LEVEL30 /;"	d
+FALL_AFTER_LEVEL4	src/util.h	/^#define FALL_AFTER_LEVEL4 /;"	d
+FALL_AFTER_LEVEL5	src/util.h	/^#define FALL_AFTER_LEVEL5 /;"	d
+FALL_AFTER_LEVEL6	src/util.h	/^#define FALL_AFTER_LEVEL6 /;"	d
+FALL_AFTER_LEVEL7	src/util.h	/^#define FALL_AFTER_LEVEL7 /;"	d
+FALL_AFTER_LEVEL8	src/util.h	/^#define FALL_AFTER_LEVEL8 /;"	d
+FALL_AFTER_LEVEL9	src/util.h	/^#define FALL_AFTER_LEVEL9 /;"	d
+FIELD_SIZE	src/util.h	/^#define FIELD_SIZE /;"	d
+FIRST_TRUE_ROW	src/util.h	/^#define FIRST_TRUE_ROW /;"	d
+FPS	src/util.h	/^#define FPS /;"	d
+GameCtx	src/tetris.h	/^typedef struct GameCtx {$/;"	s
+GameCtx	src/tetris.h	/^} GameCtx;$/;"	t	typeref:struct:GameCtx
+HoldBox	src/util.h	/^typedef struct HoldBox {$/;"	s
+HoldBox	src/util.h	/^} HoldBox; $/;"	t	typeref:struct:HoldBox
+Installation	README.md	/^## Installation$/;"	s	chapter:Tetris
+LDFLAGS	Makefile	/^LDFLAGS = -lncurses -lmenu -lform$/;"	m
+LEFT	src/block.h	/^    LEFT,$/;"	e	enum:Rotation
+LOCK_DEFAULT_FRAMES	src/util.h	/^#define LOCK_DEFAULT_FRAMES /;"	d
+LOCK_DEFAULT_MOVES	src/util.h	/^#define LOCK_DEFAULT_MOVES /;"	d
+LOCK_DEFUALT_LOWEST	src/util.h	/^#define LOCK_DEFUALT_LOWEST /;"	d
+LockPieceDelay	src/util.h	/^typedef struct LockPieceDelay {$/;"	s
+LockPieceDelay	src/util.h	/^} LockPieceDelay;$/;"	t	typeref:struct:LockPieceDelay
+MENU_OPTIONS_SIZE	src/tetris.h	/^    MENU_OPTIONS_SIZE$/;"	e	enum:MenuOptions
+MULTIPLAYER	src/tetris.h	/^    MULTIPLAYER,$/;"	e	enum:MenuOptions
+MULTIPLAYER_H	src/multiplayer.h	/^#define MULTIPLAYER_H$/;"	d
+MULTI_PAUSE	src/multiplayer.h	/^    MULTI_PAUSE,$/;"	e	enum:PacketType
+MULTI_START	src/multiplayer.h	/^    MULTI_START,$/;"	e	enum:PacketType
+MULTI_STATE_CONNECT	src/tetris.h	/^    MULTI_STATE_CONNECT,$/;"	e	enum:MultiState
+MULTI_STATE_PLAYING	src/tetris.h	/^    MULTI_STATE_PLAYING$/;"	e	enum:MultiState
+MULTI_STATE_WAITING	src/tetris.h	/^    MULTI_STATE_WAITING,$/;"	e	enum:MultiState
+MULTI_UPDATE	src/multiplayer.h	/^    MULTI_UPDATE$/;"	e	enum:PacketType
+MenuOptions	src/tetris.h	/^typedef enum MenuOptions {$/;"	g
+MenuOptions	src/tetris.h	/^} MenuOptions;$/;"	t	typeref:enum:MenuOptions
+Move	src/block.h	/^typedef struct Move {$/;"	s
+Move	src/block.h	/^} Move;$/;"	t	typeref:struct:Move
+MultiCtx	src/tetris.h	/^typedef struct MultiCtx {$/;"	s
+MultiCtx	src/tetris.h	/^} MultiCtx;$/;"	t	typeref:struct:MultiCtx
+MultiState	src/tetris.h	/^typedef enum MultiState {$/;"	g
+MultiState	src/tetris.h	/^} MultiState;$/;"	t	typeref:enum:MultiState
+PACK_BOOL_SIZE	src/multiplayer.h	/^#define PACK_BOOL_SIZE /;"	d
+PACK_DECIMAL_SIZE	src/multiplayer.h	/^#define PACK_DECIMAL_SIZE /;"	d
+PACK_LONG_DECIMAL_SIZE	src/multiplayer.h	/^#define PACK_LONG_DECIMAL_SIZE /;"	d
+PORT	src/multiplayer.h	/^#define PORT /;"	d
+PacketType	src/multiplayer.h	/^typedef enum PacketType { $/;"	g
+PacketType	src/multiplayer.h	/^} PacketType;$/;"	t	typeref:enum:PacketType
+Player	src/multiplayer.h	/^typedef int Player;$/;"	t	typeref:typename:int
+RENDER_H	src/render.h	/^#define RENDER_H$/;"	d
+RIGHT	src/block.h	/^    RIGHT,$/;"	e	enum:Rotation
+ROTATION_MAX	src/block.h	/^    ROTATION_MAX$/;"	e	enum:Rotation
+RenderCtx	src/tetris.h	/^typedef struct RenderCtx {$/;"	s
+RenderCtx	src/tetris.h	/^} RenderCtx;$/;"	t	typeref:struct:RenderCtx
+Rotation	src/block.h	/^typedef enum Rotation {$/;"	g
+Rotation	src/block.h	/^} Rotation;$/;"	t	typeref:enum:Rotation
+SERVER_H	server/server.h	/^#define SERVER_H$/;"	d
+SETTINGS	src/tetris.h	/^    SETTINGS,$/;"	e	enum:MenuOptions
+SINGLEPLAYER	src/tetris.h	/^    SINGLEPLAYER,$/;"	e	enum:MenuOptions
+STATE_EXIT	src/tetris.h	/^    STATE_EXIT$/;"	e	enum:State
+STATE_MULTIPLAYER	src/tetris.h	/^    STATE_MULTIPLAYER,$/;"	e	enum:State
+STATE_NULL	src/tetris.h	/^    STATE_NULL,$/;"	e	enum:State
+STATE_SETTINGS	src/tetris.h	/^    STATE_SETTINGS,$/;"	e	enum:State
+STATE_SINGLEPLAYER	src/tetris.h	/^    STATE_SINGLEPLAYER,$/;"	e	enum:State
+STATE_TITLE	src/tetris.h	/^    STATE_TITLE,$/;"	e	enum:State
+STD_BUF_SIZE	src/util.h	/^#define STD_BUF_SIZE /;"	d
+SevenBag	src/block.h	/^typedef struct SevenBag {$/;"	s
+SevenBag	src/block.h	/^} SevenBag;$/;"	t	typeref:struct:SevenBag
+State	src/tetris.h	/^typedef enum State {$/;"	g
+State	src/tetris.h	/^} State;$/;"	t	typeref:enum:State
+Stats	src/util.h	/^typedef struct Stats {$/;"	s
+Stats	src/util.h	/^} Stats;$/;"	t	typeref:struct:Stats
+TETRIS_H	src/tetris.h	/^#define TETRIS_H$/;"	d
+TODO	README.md	/^## TODO$/;"	s	chapter:Tetris
+Tetris	README.md	/^# Tetris$/;"	c
+UP	src/block.h	/^    UP,$/;"	e	enum:Rotation
+UTIL_H	src/util.h	/^#define UTIL_H$/;"	d
+WINDOW_H	src/window.h	/^#define WINDOW_H$/;"	d
+Window	src/window.h	/^typedef struct Window {$/;"	s
+Window	src/window.h	/^} Window;$/;"	t	typeref:struct:Window
+all	Makefile	/^all: $(target)$/;"	t
+bag	src/tetris.h	/^    SevenBag *bag;$/;"	m	struct:GameCtx	typeref:typename:SevenBag *
+bake	src/util.c	/^int bake(Block *const block, Board *const board) {$/;"	f	typeref:typename:int
+bin_dir	Makefile	/^bin_dir = \/usr\/bin$/;"	m
+block	src/tetris.h	/^    Block block;$/;"	m	struct:BoardCtx	typeref:typename:Block
+block_can_move	src/util.c	/^bool block_can_move($/;"	f	typeref:typename:bool
+block_delay_window	src/tetris.h	/^    Window *block_delay_window;$/;"	m	struct:RenderCtx	typeref:typename:Window *
+block_get_arr	src/block.c	/^bool (*block_get_arr(const BlockType type))[BLOCK_ARR_DIM] {$/;"	f	typeref:typename:bool (*)[BLOCK_ARR_DIM]
+block_get_cell_amount	src/block.c	/^int block_get_cell_amount(const BlockType type) {$/;"	f	typeref:typename:int
+block_get_color	src/block.c	/^BlockColor block_get_color(const BlockType type) {$/;"	f	typeref:typename:BlockColor
+block_get_rotation_offset	src/block.c	/^Move block_get_rotation_offset(const BlockType type, const Rotation rot) {$/;"	f	typeref:typename:Move
+block_get_tile	src/block.c	/^bool block_get_tile(const Block *const block, const int x, const int y) {$/;"	f	typeref:typename:bool
+block_get_wallkick	src/block.c	/^Move block_get_wallkick(const BlockType type, const Rotation rot, const int test) {$/;"	f	typeref:typename:Move
+block_i_arr	src/block.c	/^static bool block_i_arr[BLOCK_ARR_DIM][BLOCK_ARR_DIM] = {$/;"	v	typeref:typename:bool[][]	file:
+block_j_arr	src/block.c	/^static bool block_j_arr[BLOCK_ARR_DIM][BLOCK_ARR_DIM] = {$/;"	v	typeref:typename:bool[][]	file:
+block_l_arr	src/block.c	/^static bool block_l_arr[BLOCK_ARR_DIM][BLOCK_ARR_DIM] = {$/;"	v	typeref:typename:bool[][]	file:
+block_move	src/util.c	/^int block_move($/;"	f	typeref:typename:int
+block_o_arr	src/block.c	/^static bool block_o_arr[BLOCK_ARR_DIM][BLOCK_ARR_DIM] = {$/;"	v	typeref:typename:bool[][]	file:
+block_offset	src/block.c	/^static Move block_offset[4] = {$/;"	v	typeref:typename:Move[4]	file:
+block_out	src/tetris.h	/^    bool block_out;$/;"	m	struct:BoardCtx	typeref:typename:bool
+block_rotate_ccw	src/util.c	/^int block_rotate_ccw(Block *const block, const Board *const board) {$/;"	f	typeref:typename:int
+block_rotate_cw	src/util.c	/^int block_rotate_cw(Block *const block, const Board *const board) {$/;"	f	typeref:typename:int
+block_s_arr	src/block.c	/^static bool block_s_arr[BLOCK_ARR_DIM][BLOCK_ARR_DIM] = {$/;"	v	typeref:typename:bool[][]	file:
+block_t_arr	src/block.c	/^static bool block_t_arr[BLOCK_ARR_DIM][BLOCK_ARR_DIM] = {$/;"	v	typeref:typename:bool[][]	file:
+block_wallkick	src/util.c	/^int block_wallkick($/;"	f	typeref:typename:int
+block_z_arr	src/block.c	/^static bool block_z_arr[BLOCK_ARR_DIM][BLOCK_ARR_DIM] = {$/;"	v	typeref:typename:bool[][]	file:
+blocks	src/board.h	/^    BlockType *blocks;$/;"	m	struct:Board	typeref:typename:BlockType *
+blocks	src/util.h	/^    int blocks;$/;"	m	struct:Stats	typeref:typename:int
+board	src/tetris.h	/^    Board *board;$/;"	m	struct:BoardCtx	typeref:typename:Board *
+board_clear_full_rows	src/board.c	/^int board_clear_full_rows(Board *const board) {$/;"	f	typeref:typename:int
+board_create	src/board.c	/^Board *board_create(const int width, const int height) {$/;"	f	typeref:typename:Board *
+board_destroy	src/board.c	/^void board_destroy(Board *const board) {$/;"	f	typeref:typename:void
+board_erase_rows	src/board.c	/^void board_erase_rows(Board *const board, const int from, const int to) {$/;"	f	typeref:typename:void
+board_get_block	src/board.c	/^BlockType *board_get_block($/;"	f	typeref:typename:BlockType *
+board_is_row_full	src/board.c	/^bool board_is_row_full(const Board *const board, const int y) {$/;"	f	typeref:typename:bool
+board_window	src/tetris.h	/^    Window *board_window;$/;"	m	struct:RenderCtx	typeref:typename:Window *
+broadcast	server/server.c	/^int broadcast($/;"	f	typeref:typename:int
+buf	src/tetris.h	/^    CircularBuffer *buf;$/;"	m	struct:BoardCtx	typeref:typename:CircularBuffer *
+buf_add_head	src/circular_buffer.c	/^int buf_add_head(CircularBuffer *const buf, const int val) {$/;"	f	typeref:typename:int
+buf_add_tail	src/circular_buffer.c	/^int buf_add_tail(CircularBuffer *const buf, const int val) {$/;"	f	typeref:typename:int
+buf_create	src/circular_buffer.c	/^CircularBuffer *buf_create(const size_t size) {$/;"	f	typeref:typename:CircularBuffer *
+buf_destroy	src/circular_buffer.c	/^void buf_destroy(CircularBuffer *const buf) {$/;"	f	typeref:typename:void
+buf_get_end	src/circular_buffer.c	/^int *buf_get_end(const CircularBuffer *const buf) {$/;"	f	typeref:typename:int *
+buf_get_head	src/circular_buffer.c	/^int buf_get_head(const CircularBuffer *const buf, const int offset) {$/;"	f	typeref:typename:int
+buf_get_tail	src/circular_buffer.c	/^int buf_get_tail(const CircularBuffer *const buf, const int offset) {$/;"	f	typeref:typename:int
+buf_is_full	src/circular_buffer.c	/^bool buf_is_full(const CircularBuffer *const buf) {$/;"	f	typeref:typename:bool
+buf_remove_head	src/circular_buffer.c	/^void buf_remove_head(CircularBuffer *const buf) {$/;"	f	typeref:typename:void
+buf_remove_tail	src/circular_buffer.c	/^void buf_remove_tail(CircularBuffer *const buf) {$/;"	f	typeref:typename:void
+buf_window	src/tetris.h	/^    Window *buf_window;$/;"	m	struct:RenderCtx	typeref:typename:Window *
+buffer	src/circular_buffer.h	/^    int *buffer;$/;"	m	struct:CircularBuffer	typeref:typename:int *
+cast_block_shadow	src/util.c	/^Block cast_block_shadow(const Block *const block, const Board *const board) {$/;"	f	typeref:typename:Block
+clean	Makefile	/^clean:$/;"	t
+combo	src/util.h	/^    int combo;$/;"	m	struct:Stats	typeref:typename:int
+create_window_for_block_delay	src/util.c	/^Window *create_window_for_block_delay(const int x, const int y) {$/;"	f	typeref:typename:Window *
+create_window_for_board	src/util.c	/^Window *create_window_for_board($/;"	f	typeref:typename:Window *
+create_window_for_buf	src/util.c	/^Window *create_window_for_buf($/;"	f	typeref:typename:Window *
+create_window_for_holdbox	src/util.c	/^Window *create_window_for_holdbox(const int x, const int y) {$/;"	f	typeref:typename:Window *
+create_window_for_stats	src/util.c	/^Window *create_window_for_stats(const int x, const int y) {$/;"	f	typeref:typename:Window *
+curr_multi_state	src/tetris.h	/^    MultiState curr_multi_state;$/;"	m	struct:MultiCtx	typeref:typename:MultiState
+curr_type	src/util.h	/^    BlockType curr_type; $/;"	m	struct:HoldBox	typeref:typename:BlockType
+current_state	src/tetris.c	/^State current_state = STATE_TITLE;$/;"	v	typeref:typename:State
+debug	Makefile	/^debug: CFLAGS += -ggdb -O0 -DDEBUG$/;"	t
+debug	Makefile	/^debug: all$/;"	t
+default_lock_piece_delay	src/util.h	/^static const LockPieceDelay default_lock_piece_delay = {$/;"	v	typeref:typename:const LockPieceDelay
+fall	src/util.c	/^int fall(Block *const block, Board *const board) {$/;"	f	typeref:typename:int
+fmt_length	src/multiplayer.c	/^size_t fmt_length(const char *const fmt) {$/;"	f	typeref:typename:size_t
+fps_counter	src/tetris.h	/^    long long fps_counter;$/;"	m	struct:GameCtx	typeref:typename:long long
+game_ctx	src/tetris.h	/^    GameCtx game_ctx;$/;"	m	struct:MultiCtx	typeref:typename:GameCtx
+get_client_socket	src/tetris.c	/^int get_client_socket(const char *const ip, const char *const port) {$/;"	f	typeref:typename:int
+get_fall_after	src/util.c	/^int get_fall_after(const int level) {$/;"	f	typeref:typename:int
+get_field_str	src/tetris.c	/^void get_field_str(FIELD *const field, char *buf) {$/;"	f	typeref:typename:void
+get_level	src/util.c	/^int get_level(const int score) {$/;"	f	typeref:typename:int
+get_listening_socket	server/server.c	/^int get_listening_socket(void) {$/;"	f	typeref:typename:int
+get_logo_length	src/util.c	/^size_t get_logo_length(void) {$/;"	f	typeref:typename:size_t
+get_logo_nolines	src/util.c	/^size_t get_logo_nolines(void) {$/;"	f	typeref:typename:size_t
+get_menu_length	src/util.c	/^size_t get_menu_length(void) {$/;"	f	typeref:typename:size_t
+get_menu_option	src/util.c	/^int get_menu_option($/;"	f	typeref:typename:int
+head	src/circular_buffer.h	/^    int *head;$/;"	m	struct:CircularBuffer	typeref:typename:int *
+height	src/board.h	/^    int height;$/;"	m	struct:Board	typeref:typename:int
+height	src/window.h	/^    int height;$/;"	m	struct:Window	typeref:typename:int
+hold	src/tetris.h	/^    HoldBox hold;$/;"	m	struct:BoardCtx	typeref:typename:HoldBox
+hold_box_window	src/tetris.h	/^    Window *hold_box_window;$/;"	m	struct:RenderCtx	typeref:typename:Window *
+init	src/tetris.c	/^void init(void) {$/;"	f	typeref:typename:void
+init_singleplayer	src/tetris.c	/^void init_singleplayer(BoardCtx *board, RenderCtx *render, GameCtx *game) {$/;"	f	typeref:typename:void
+install	Makefile	/^install: all$/;"	t
+is_block_on_ground	src/util.c	/^bool is_block_on_ground(const Block *const block, const Board *const board) {$/;"	f	typeref:typename:bool
+last_fall	src/tetris.h	/^    long long last_fall;$/;"	m	struct:GameCtx	typeref:typename:long long
+left	src/block.h	/^    size_t left;$/;"	m	struct:SevenBag	typeref:typename:size_t
+left_frames	src/util.h	/^    int left_frames;$/;"	m	struct:LockPieceDelay	typeref:typename:int
+left_moves	src/util.h	/^    int left_moves;$/;"	m	struct:LockPieceDelay	typeref:typename:int
+level	src/util.h	/^    int level;$/;"	m	struct:Stats	typeref:typename:int
+lock_out	src/tetris.h	/^    bool lock_out;$/;"	m	struct:BoardCtx	typeref:typename:bool
+lock_piece_delay	src/tetris.h	/^    LockPieceDelay lock_piece_delay;$/;"	m	struct:GameCtx	typeref:typename:LockPieceDelay
+lowest	src/util.h	/^    int lowest;$/;"	m	struct:LockPieceDelay	typeref:typename:int
+main	server/server.c	/^int main(void) {$/;"	f	typeref:typename:int
+main	src/tetris.c	/^int main(void) {$/;"	f	typeref:typename:int
+menu_arrow	src/tetris.h	/^static const char menu_arrow[] = "--> ";$/;"	v	typeref:typename:const char[]
+menu_choices	src/tetris.h	/^static const char *const menu_choices[] = {$/;"	v	typeref:typename:const char * const[]
+move_ret	src/tetris.h	/^    int move_ret;$/;"	m	struct:GameCtx	typeref:typename:int
+multiplayer	src/tetris.c	/^void multiplayer(void) {$/;"	f	typeref:typename:void
+multiplayer_connect	src/tetris.c	/^void multiplayer_connect(MultiCtx *ctx) {$/;"	f	typeref:typename:void
+multiplayer_init	src/tetris.c	/^void multiplayer_init(MultiCtx *ctx) {$/;"	f	typeref:typename:void
+multiplayer_play	src/tetris.c	/^void multiplayer_play(MultiCtx *ctx) {$/;"	f	typeref:typename:void
+multiplayer_uninit	src/tetris.c	/^void multiplayer_uninit(MultiCtx *ctx) {$/;"	f	typeref:typename:void
+objects	Makefile	/^objects = $(addprefix $(objects_dir)\/, $(sources:%.c=%.o))$/;"	m
+objects_dir	Makefile	/^objects_dir = .\/build$/;"	m
+p1_board_ctx	src/tetris.h	/^    BoardCtx p1_board_ctx;$/;"	m	struct:MultiCtx	typeref:typename:BoardCtx
+p1_render_ctx	src/tetris.h	/^    RenderCtx p1_render_ctx;$/;"	m	struct:MultiCtx	typeref:typename:RenderCtx
+p2_board_ctx	src/tetris.h	/^    BoardCtx p2_board_ctx;$/;"	m	struct:MultiCtx	typeref:typename:BoardCtx
+p2_render_ctx	src/tetris.h	/^    RenderCtx p2_render_ctx;$/;"	m	struct:MultiCtx	typeref:typename:RenderCtx
+pack	src/multiplayer.c	/^int pack(char *str, const char *const fmt, ...) {$/;"	f	typeref:typename:int
+quit	src/tetris.h	/^    bool quit;$/;"	m	struct:GameCtx	typeref:typename:bool
+reap_zombies	server/server.c	/^void reap_zombies(void) {$/;"	f	typeref:typename:void
+recv_packet_type	src/multiplayer.c	/^PacketType recv_packet_type(const int sockfd) {$/;"	f	typeref:typename:PacketType
+recvall	src/multiplayer.c	/^int recvall(const int sockfd, char *const buf, const int len) {$/;"	f	typeref:typename:int
+render_block	src/render.c	/^void render_block($/;"	f	typeref:typename:void
+render_block_delay	src/render.c	/^void render_block_delay($/;"	f	typeref:typename:void
+render_board	src/render.c	/^void render_board(Window *const window, const Board *const board) {$/;"	f	typeref:typename:void
+render_buf	src/render.c	/^void render_buf(Window *const window, const CircularBuffer *const buf) {$/;"	f	typeref:typename:void
+render_hold_box	src/render.c	/^void render_hold_box(Window *const window, HoldBox *const hold) {$/;"	f	typeref:typename:void
+render_stats	src/render.c	/^void render_stats(Window *const window, const Stats *const stats) {$/;"	f	typeref:typename:void
+render_tile	src/render.c	/^void render_tile($/;"	f	typeref:typename:void
+rot	src/block.h	/^    Rotation rot;$/;"	m	struct:Block	typeref:typename:Rotation
+rows	src/util.h	/^    int rows;$/;"	m	struct:Stats	typeref:typename:int
+rows2add	src/tetris.h	/^    int rows2add;$/;"	m	struct:GameCtx	typeref:typename:int
+score	src/util.h	/^    int score;$/;"	m	struct:Stats	typeref:typename:int
+send_packet_type	src/multiplayer.c	/^void send_packet_type(const int sockfd, const PacketType type) {$/;"	f	typeref:typename:void
+sendall	src/multiplayer.c	/^int sendall(const int sockfd, const char *const buf, const int len) {$/;"	f	typeref:typename:int
+seven_bag_create	src/block.c	/^SevenBag *seven_bag_create(void) {$/;"	f	typeref:typename:SevenBag *
+seven_bag_destroy	src/block.c	/^void seven_bag_destroy(SevenBag *const bag) {$/;"	f	typeref:typename:void
+seven_bag_fill	src/block.c	/^void seven_bag_fill(SevenBag *const bag) {$/;"	f	typeref:typename:void
+seven_bag_get	src/block.c	/^BlockType seven_bag_get(SevenBag *const bag) {$/;"	f	typeref:typename:BlockType
+seven_bag_shuffle	src/block.c	/^void seven_bag_shuffle(SevenBag *const bag) {$/;"	f	typeref:typename:void
+sigchld_handler	server/server.c	/^void sigchld_handler() {$/;"	f	typeref:typename:void
+singleplayer	src/tetris.c	/^void singleplayer(void) {$/;"	f	typeref:typename:void
+singleplayer_input	src/tetris.c	/^void singleplayer_input(BoardCtx *board, RenderCtx *render, GameCtx *game) {$/;"	f	typeref:typename:void
+singleplayer_logic	src/tetris.c	/^void singleplayer_logic(BoardCtx *board, RenderCtx *render, GameCtx *game) {$/;"	f	typeref:typename:void
+singleplayer_render	src/tetris.c	/^void singleplayer_render(BoardCtx *board, RenderCtx *render, GameCtx *game) {$/;"	f	typeref:typename:void
+size	src/circular_buffer.h	/^    size_t size;$/;"	m	struct:CircularBuffer	typeref:typename:size_t
+sources	Makefile	/^sources = $(shell find .\/src -type f -name *.c)$/;"	m
+stats	src/tetris.h	/^    Stats stats;$/;"	m	struct:BoardCtx	typeref:typename:Stats
+stats_update	src/util.c	/^void stats_update(Stats *const stats, const int cleared_rows) {$/;"	f	typeref:typename:void
+stats_window	src/tetris.h	/^    Window *stats_window;$/;"	m	struct:RenderCtx	typeref:typename:Window *
+swap	src/tetris.h	/^    bool swap;$/;"	m	struct:GameCtx	typeref:typename:bool
+swapped	src/util.h	/^    bool swapped;$/;"	m	struct:HoldBox	typeref:typename:bool
+tail	src/circular_buffer.h	/^    int *tail;$/;"	m	struct:CircularBuffer	typeref:typename:int *
+target	Makefile	/^target = tetris$/;"	m
+tetris_logo	src/tetris.h	/^static const char *const tetris_logo =$/;"	v	typeref:typename:const char * const
+title	src/tetris.c	/^void title(void) {$/;"	f	typeref:typename:void
+to_swap	src/tetris.h	/^    BlockType to_swap;$/;"	m	struct:GameCtx	typeref:typename:BlockType
+type	src/block.h	/^    BlockType type;$/;"	m	struct:Block	typeref:typename:BlockType
+types	src/block.h	/^    BlockType types[7];$/;"	m	struct:SevenBag	typeref:typename:BlockType[7]
+uninit	src/tetris.c	/^void uninit(void) {$/;"	f	typeref:typename:void
+uninit_singleplayer	src/tetris.c	/^void uninit_singleplayer(BoardCtx *board, RenderCtx *render, GameCtx *game) {$/;"	f	typeref:typename:void
+uninstall	Makefile	/^uninstall: all$/;"	t
+unpack	src/multiplayer.c	/^int unpack(char *str, const char *const fmt, ...) {$/;"	f	typeref:typename:int
+used	src/circular_buffer.h	/^    size_t used;$/;"	m	struct:CircularBuffer	typeref:typename:size_t
+wait_for_players	server/server.c	/^void wait_for_players($/;"	f	typeref:typename:void
+width	src/board.h	/^    int width;$/;"	m	struct:Board	typeref:typename:int
+width	src/window.h	/^    int width;$/;"	m	struct:Window	typeref:typename:int
+win	src/window.h	/^    WINDOW *win;$/;"	m	struct:Window	typeref:typename:WINDOW *
+window_create	src/window.c	/^Window *window_create($/;"	f	typeref:typename:Window *
+window_destroy	src/window.c	/^void window_destroy(Window *window) {$/;"	f	typeref:typename:void
+x	src/block.h	/^    int x;$/;"	m	struct:Block	typeref:typename:int
+x	src/block.h	/^    int x;$/;"	m	struct:Move	typeref:typename:int
+y	src/block.h	/^    int y;$/;"	m	struct:Block	typeref:typename:int
+y	src/block.h	/^    int y;$/;"	m	struct:Move	typeref:typename:int
