@@ -2,3 +2,5 @@ build
 tetris
 server
 oldserver
+tags
+compile_commands.json
