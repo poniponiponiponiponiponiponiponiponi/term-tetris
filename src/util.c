@@ -328,7 +328,7 @@ const char *get_board_fmt(void) {
      * d - board height
      * %ds - board memory where d is height * width
      *
-     * ddd...d - all block types of a buf with std size
+     * %ds - block buf where d is the size of the buffer
      *
      * d - block x
      * d - block y
@@ -375,21 +375,129 @@ const char *get_board_fmt(void) {
     return fmt;
 }
 
-/* As long as there are less block types than 256 this will work fine...
- * and it makes the packing and unpacking much easier with the packing 
- * everything (numbers) as ascii character strings that I went with.
- * I don't really care about making packages as small as possible - even
- * without the compression the network usage would be around 600 KiB/s.
- * With compression the usage is around 6 KiB/s. */
-void compress_board(const Board *const board, char *out) {
+char *buf_to_string(const CircularBuffer *const buf) {
+    char *s = calloc(1, buf->size * sizeof(char));
+    for (size_t i = 0; i < buf->size; i++) {
+        int val = buf_get_head(buf, i);
+        s[i] = (char)val;
+    }
+    return s;
+}
+
+void string_to_buf(char *str, CircularBuffer *const buf) {
+    while (buf->used) {
+        buf_remove_head(buf);
+    }
+    for (size_t i = 0; i < buf->size; i++) {
+        buf_add_head(buf, str[i]);
+    }
+}
+
+static char *blocks_to_string(const Board *const board) {
+    size_t len = board->height * board->width;
+    char *s = calloc(1, len * sizeof(char));
+    for (size_t i = 0; i < len; i++)
+        s[i] = (char)board->blocks[i];
+    return s;
+}
+
+void string_to_blocks(char *str, Board *const board) {
+    size_t len = board->height * board->width;
+    for (size_t i = 0; i < len; i++) {
+        board->blocks[i] = str[i];
+    }
 }
 
 void send_board_ctx(const BoardCtx *const board_ctx, const int sockfd) {
     send_packet_type(sockfd, MULTI_UPDATE);
     const char *fmt = get_board_fmt();
-    char *buf = calloc(1, fmt_length(fmt));
-    pack(buf, fmt,
+    const size_t dst_len = fmt_length(fmt);
+    char *dst = calloc(1, dst_len);
+    char *buf_str = buf_to_string(board_ctx->buf);
+    char *blocks_str = blocks_to_string(board_ctx->board);
+
+    pack(dst, fmt,
             board_ctx->board->width,
             board_ctx->board->height,
-            board_ctx->board->blocks);
+            blocks_str,
+
+            buf_str,
+
+            board_ctx->block.x,
+            board_ctx->block.y,
+            board_ctx->block.rot,
+            board_ctx->block.type,
+
+            board_ctx->stats.rows,
+            board_ctx->stats.blocks,
+            board_ctx->stats.combo,
+            board_ctx->stats.level,
+            board_ctx->stats.score,
+
+            board_ctx->hold.swapped,
+            board_ctx->hold.curr_type,
+
+            board_ctx->lock_piece_delay.left_moves,
+            board_ctx->lock_piece_delay.left_frames,
+            board_ctx->lock_piece_delay.lowest,
+
+            board_ctx->block_out,
+            board_ctx->lock_out
+            );
+
+    sendall(sockfd, dst, dst_len);
+
+    free(buf_str);
+    free(blocks_str);
+    free(dst);
+}
+
+void recv_board_ctx(BoardCtx *board_ctx, const int sockfd) {
+    const char *fmt = get_board_fmt();
+    const size_t src_len = fmt_length(fmt);
+    char *src = calloc(1, src_len);
+
+    Board *board = board_ctx->board;
+    const size_t board_size = board->width * board->height;
+    CircularBuffer *buf = board_ctx->buf;
+
+    char *blocks_str = calloc(1, board_size);
+    char *buf_str = calloc(1, buf->size);
+
+    recvall(sockfd, src, src_len);
+    unpack(src, fmt,
+            &board_ctx->board->width,
+            &board_ctx->board->height,
+            blocks_str,
+
+            buf_str,
+
+            &board_ctx->block.x,
+            &board_ctx->block.y,
+            &board_ctx->block.rot,
+            &board_ctx->block.type,
+
+            &board_ctx->stats.rows,
+            &board_ctx->stats.blocks,
+            &board_ctx->stats.combo,
+            &board_ctx->stats.level,
+            &board_ctx->stats.score,
+
+            &board_ctx->hold.swapped,
+            &board_ctx->hold.curr_type,
+
+            &board_ctx->lock_piece_delay.left_moves,
+            &board_ctx->lock_piece_delay.left_frames,
+            &board_ctx->lock_piece_delay.lowest,
+
+            &board_ctx->block_out,
+            &board_ctx->lock_out
+            );
+
+    string_to_blocks(blocks_str, board);
+    string_to_buf(buf_str, buf);
+
+    free(src);
+    free(blocks_str);
+    free(buf_str);
 }

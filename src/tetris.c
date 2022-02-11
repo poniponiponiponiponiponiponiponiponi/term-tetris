@@ -504,8 +504,27 @@ void multiplayer_connect(MultiCtx *ctx) {
     curs_set(0);
 }
 
+void recv_packet(MultiCtx *ctx) {
+    PacketType packett = recv_packet_type(ctx->socket);
+    switch (packett) {
+        case MULTI_UPDATE:
+            recv_board_ctx(&ctx->p2_board_ctx, ctx->socket);
+            break;
+        default:
+            break;
+    }
+}
+
 void multiplayer_play(MultiCtx *ctx) {
     debug("multiplayer: start");
+
+    while (true) {
+        debug("stupid debuging");
+        show_debug();
+        send_packet_type(ctx->socket, MULTI_UPDATE);
+        usleep(1000000);
+    }
+
     while (!ctx->game_ctx.quit) {
         singleplayer_input(&ctx->p1_board_ctx, &ctx->game_ctx);
         singleplayer_logic(&ctx->p1_board_ctx, &ctx->game_ctx);
@@ -513,10 +532,8 @@ void multiplayer_play(MultiCtx *ctx) {
         singleplayer_render(&ctx->p2_board_ctx, &ctx->p2_render_ctx);
 
         send_board_ctx(&ctx->p1_board_ctx, ctx->socket);
+        recv_packet(ctx);
 
-        // After everything sleep... if we assume the program takes 0 zero
-        // to process everything this will keep a constant frame rate.
-        // This is bad but good enough for this simple tetris implementation.
         usleep(1000000/FPS);
     }
 }

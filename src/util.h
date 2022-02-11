@@ -105,6 +105,7 @@ int get_menu_option(
         const int no_options);
 void get_field_str(FIELD *const field, char *buf);
 void send_board_ctx(const BoardCtx *const board_ctx, const int sockfd);
+void recv_board_ctx(BoardCtx *board_ctx, const int sockfd);
 
 
 #endif
