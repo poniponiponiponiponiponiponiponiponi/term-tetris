@@ -518,10 +518,36 @@ void recv_packet(MultiCtx *ctx) {
 void multiplayer_play(MultiCtx *ctx) {
     debug("multiplayer: start");
 
-    while (true) {
-        debug("stupid debuging");
-        show_debug();
+    while (0) {
+        debug("baka");
+
         send_packet_type(ctx->socket, MULTI_UPDATE);
+        char fmt[] = "dd6sdbd";
+        const size_t dst_len = fmt_length(fmt);
+        char *dst = calloc(1, dst_len);
+
+        pack(dst, fmt, 1, 2, "abcdef", 3, false, 4);
+        sendall(ctx->socket, dst, dst_len);
+
+        PacketType t = recv_packet_type(ctx->socket);
+        if (t == MULTI_UPDATE)
+            debug("multi update");
+        else
+            debug("WERID PACKET");
+
+        int n1, n2, n3, n4;
+        bool b1;
+        char s1[7];
+
+        recvall(ctx->socket, dst, dst_len);
+        unpack(dst, fmt, &n1, &n2, s1, &n3, &b1, &n4);
+        
+        char output[123];
+        sprintf(output, "%d %d %s %d %d %d", n1, n2, s1, n3, b1, n4);
+        debug(output);
+
+        free(dst);
+        show_debug();
         usleep(1000000);
     }
 

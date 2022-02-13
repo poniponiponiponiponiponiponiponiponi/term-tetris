@@ -352,14 +352,15 @@ const char *get_board_fmt(void) {
      * b - lock_out
      */
     static char fmt[1024];
+    char tmp[1024];
 
     if (!generated) {
         generated = true;
         // add board fmt
         sprintf(fmt, "dd%ds", BOARD_WIDTH*BOARD_HEIGHT);
         // add buf fmt
-        for (size_t i = 0; i < STD_BUF_SIZE; i++)
-            strcat(fmt, "d");
+        sprintf(tmp, "%ds", STD_BUF_SIZE);
+        strcat(fmt, tmp);
         // add block fmt
         strcat(fmt, "dddd");
         // add stats fmt

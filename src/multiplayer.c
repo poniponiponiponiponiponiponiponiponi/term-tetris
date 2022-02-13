@@ -16,7 +16,7 @@
  * letters responding for particular variable types. 'd' is int,
  * 'l' is long long, a number followed by 's' is a char[number] array,
  * 'b' is bool.
- * Also in those function there's some fuckery with memcpy. It's not the
+ * Also in those functions there's some fuckery with memcpy. It's not the
  * fastest way to do it for sure however this is the simplest thing that I
  * come up with to get rid off the null byte at the end of sprintf functions.
  */

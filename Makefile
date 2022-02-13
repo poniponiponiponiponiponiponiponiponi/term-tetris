@@ -2,7 +2,7 @@ GAME := tetris
 SERVER := server
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Wpedantic -march=native --std=gnu11 -ggdb -Wstrict-aliasing -fsanitize=address -O3
+CFLAGS = -Wall -Wextra -Wpedantic -march=native --std=gnu11 -ggdb -Wstrict-aliasing -fsanitize=address 
 LDFLAGS = -lncurses -lmenu -lform -fsanitize=address
 
 BUILD_DIR := ./build
