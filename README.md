@@ -6,10 +6,10 @@ None of them implemented most of the machanics that define modern tetris -
 things like seven bag randomization and lock delay.
 I'm not a tetris pro myself so if something is wrong or missing let me know.
 ## TODO
-    - Improving movement (use the keyboard device or something
+    - Improve movement (use the keyboard device or something
     instead of the getch function),
-    - settings for customization,
-    - multiplayer.
+    - Add settings for customization,
+    - Improve multiplayer.
 ## Controls
     - `left arrow` moves to left.
     - `right arrow` moves to right.
